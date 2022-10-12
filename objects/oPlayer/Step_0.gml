@@ -16,7 +16,7 @@ anyAttack = slashAttack
 PlayerMoving = left or up or down or right
 
 //Remember previous playerDirection
-if (speed != 0) {memory_direction = direction}
+if (speed != 0 and rollDur = 0) {memory_direction = direction}
 
 #endregion
 
@@ -73,7 +73,7 @@ state = Player_State.idle
 //Enter rollState
 if dodgeRoll{
 	state = Player_State.dodge
-	
+	rollDur = 22
 }
 
 //Enter attackState
