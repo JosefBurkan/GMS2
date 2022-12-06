@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "fSprites",
-    "path": "folders/Sprites/forestSprites/fSprites.yy",
+    "name": "nature",
+    "path": "folders/Sprites/forestSprites/fSprites/nature.yy",
   },
 }

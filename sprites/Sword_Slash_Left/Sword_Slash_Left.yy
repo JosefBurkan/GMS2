@@ -78,7 +78,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Attacks",
-    "path": "folders/Sprites/playerSprites/Attacks.yy",
+    "name": "Slash",
+    "path": "folders/Sprites/playerSprites/Attacks/Slash.yy",
   },
 }

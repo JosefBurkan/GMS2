@@ -10,8 +10,9 @@ right = keyboard_check_direct(ord("D"))
 down = keyboard_check_direct(ord("S"))
 up = keyboard_check_direct(ord("W"))
 slashAttack = keyboard_check_pressed(ord("K"))
+spinAttack = keyboard_check_pressed(ord("L"))
 dodgeRoll = keyboard_check_pressed(vk_space)
-anyAttack = slashAttack
+anyAttack = slashAttack or spinAttack
 
 PlayerMoving = left or up or down or right
 
@@ -39,6 +40,10 @@ slashSlide = max(slashSlide-1,0)
 //Roll - rollduration
 rollDur = max(rollDur-1,0)
 
+//SpinAttack - Cooldown
+global.spinCooldown = max(global.spinCooldown-1,0)
+
+
 //Prevents currentHealth from going above maxHealth
 if global.oPlayerHealthCurrent > global.oPlayerHealth {
 	global.oPlayerHealthCurrent -= 0.5
@@ -49,9 +54,9 @@ if global.oPlayerHealthCurrent > global.oPlayerHealth {
 //what direction oPlayer is facing
 	if global.slashDuration = 0 {
 	
-		if left { global.playerDirection= "dirLeft"}
+		if left { global.playerDirection = "dirLeft" }
 		if right { global.playerDirection = "dirRight"}
-		if up { global.playerDirection = "dirUp"}
+		if up { global.playerDirection = "dirUp" }
 		if down { global.playerDirection = "dirDown"}
 	}
 
@@ -109,6 +114,10 @@ if state = Player_State.attack{
 	if slashAttack {
 		//Slideduration, SlideSpeed
 		attack(8, 1)
+	}
+	
+	else if spinAttack && global.spinCooldown = 0 {	
+		spin()
 	}
 	
 }

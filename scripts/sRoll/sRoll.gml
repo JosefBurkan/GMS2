@@ -2,11 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function roll(){
 
+
 	if global.slashDuration = 0 {
 		image_index = 0
 		image_speed = 0.35
 		speed = rollSpeed
 		direction = memory_direction
+		global.oPlayerIFrames = 20
 	}
 	
 	else  {
@@ -14,5 +16,6 @@ function roll(){
 		speed = rollSpeed
 		direction = memory_direction - 180
 		rollDur = 10
+		global.oPlayerIFrames = rollDur
 	}
 }

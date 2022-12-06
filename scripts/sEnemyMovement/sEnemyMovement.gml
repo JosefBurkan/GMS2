@@ -4,7 +4,7 @@ function enemyMovement(_movespeed, _aggroRange, _jump){
 	
 	if _jump = true && jumpFrequency <= 30{
 		if iFrames = 0 && point_in_circle(oPlayer.x, oPlayer.y, x, y, _aggroRange){
-			speed = 1
+			speed = moveSpeed
 			
 
 		}

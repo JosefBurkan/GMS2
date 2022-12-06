@@ -13,6 +13,8 @@ knockBack = max(knockBack-1,0)
 jumpFrequency = max(jumpFrequency-1,0)
 jumpDirection = max(jumpDirection-1, 0)
 
+moveSpeed = lerp(speed, 1, 0.8)
+
 //How often slime will jump towards player
 if jumpFrequency <= 0 {
 	jumpFrequency = 90

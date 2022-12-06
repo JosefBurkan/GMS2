@@ -29,20 +29,15 @@ with oPlayer {
 	else if global.playerDirection == "dirDown" {
 		sprite_index = Sword_Slash_Down
 		}
-		
-	else {
-		sprite_index = Sword_Slash_Right
-	}
-	
 }
 		
 
 //Moving the player while attacking
 	if slashSlide != 0 {
-		if global.playerDirection = "dirLeft"{hspeed = -slideSpeed}
-		if global.playerDirection = "dirRight"{hspeed = slideSpeed}
-		if global.playerDirection = "dirUp" {vspeed = -slideSpeed}
-		if global.playerDirection = "dirDown" {vspeed = slideSpeed}
+		if global.playerDirection == "dirLeft"{hspeed = -slideSpeed}
+		if global.playerDirection == "dirRight"{hspeed = slideSpeed}
+		if global.playerDirection == "dirUp" {vspeed = -slideSpeed}
+		if global.playerDirection == "dirDown" {vspeed = slideSpeed}
 
 
 	}

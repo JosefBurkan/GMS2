@@ -6,9 +6,20 @@ function sEnemyHit(_iFrames, _knockBack, _knockBackSpeed, _freezeDuration, _spri
 
 
 
-	if place_meeting(x,y,oSlash){
+if place_meeting(x,y,oSlash){	
 		
-	
+		if iFrames = 0 {
+			enemyHealth-=global.damage
+			iFrames = _iFrames
+			knockBack = _knockBack
+			instance_create_depth(x,y,-1,oHitmark)
+			audio_play_sound(_sfx, 1, 0)
+
+			}
+			
+	}
+
+else if place_meeting(x,y,oSpinHBox){	
 		
 		if iFrames = 0 {
 			enemyHealth-=global.damage
@@ -21,8 +32,6 @@ function sEnemyHit(_iFrames, _knockBack, _knockBackSpeed, _freezeDuration, _spri
 			
 	}
 			
-
-
 	
 	
 		if knockBack != 0 {

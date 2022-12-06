@@ -8,6 +8,7 @@ global.oPlayerHealthCurrent = 3
 global.oPlayerIFrames = 0
 memory_direction = 0
 rollSpeed = 2
+global.spinCooldown = 0
 
 enum Player_State{
 	hurt,
